@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title})}">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="content">
+    <form class="container my-5 p-5" data-th-action="@{/save}" method="post">
+        <h4><center>New Book Register</center></h4>
+        <div class="mb-3">
+            <label for="name" class="form-label">Book Name
+            </label> <input type="text" id="name" class="form-control" name="name">
+        </div>
+
+        <div class="mb-3">
+            <label for="author" class="form-label">Book Author
+            </label> <input type="text" id="author" class="form-control" name="author">
+        </div>
+
+        <div class="mb-3">
+            <label for="price" class="form-label">Book Price
+            </label> <input type="text" id="price" class="form-control" name="price">
+        </div>
+
+        <div class="mb-3 text-center my-2">
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

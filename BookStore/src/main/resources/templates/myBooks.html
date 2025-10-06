@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title})}">
+<head>
+
+    <title>Book Application</title>
+
+</head>
+<body>
+
+<div id="content" class="container my-5 col-md-6">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Book Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Price</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="b :${myBook}">
+                <th scope="row" th:text="${b.id}"></th>
+                <td th:text="${b.name}"></td>
+                <td th:text="${b.author}"></td>
+                <td th:text="${b.price}"></td>
+                <td><a style="color: red" th:href="@{/deleteMyList/{id}(id= ${b.id})}"><i class="fa-solid fa-trash"></i></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

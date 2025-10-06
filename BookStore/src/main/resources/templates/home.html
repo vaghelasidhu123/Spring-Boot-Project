@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title})}">
+<head>
+
+    <title>Bookstore Application</title>
+</head>
+<body>
+
+          <div id="content" class="container text-center my-5">
+              <h1>WELCOME TO NEW BOOK STORE</h1>
+              <h6>Discover a world of literature at our online bookstore.
+                  Immerse yourself in a vast collection of genres, from bestsellers to
+                  niche treasures. Explore digital and physical editions, catering to
+                  diverse reading preferences. Enjoy seamless browsing and secure
+                  transactions, making your book-buying experience effortless. Whether
+                  you seek the latest releases or timeless classics, our bookstore is
+                  your gateway to literary adventures. With user-friendly interfaces
+                  and prompt delivery, we bring the joy of reading right to your
+                  fingertips. Uncover stories that captivate, inspire, and entertain,
+                  all from the comfort of your home. Welcome to a virtual haven for
+                  book enthusiasts!</h6>
+              <img alt="background image" class="img-fluid" src="/bookstore.jpg">
+              <div class="mt-3">
+                  <a th:href="@{/available_books}" class="btn btn-primary me-2">Browse Available Books</a>
+                  <a th:href="@{/book_register}" class="btn btn-secondary">Register New Book</a>
+              </div>
+          </div>
+</body>
+</html>
